@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swvr"
+version = "0.1.0"
+description = "softmax(h @ W.T + b) @ E and an MSE loss on it, without materializing the [N, V] logits"
+readme = "README.md"
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.9"
+dependencies = ["torch>=2.4"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["swvr"]
